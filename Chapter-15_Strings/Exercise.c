@@ -1,24 +1,23 @@
-//TODO : Attempt the following questions.
-// * (B) TO uniquely identify a book of a 10 digit ISBN (International Standard Book Number) is used, the right most digit in ISBN is a checksum digit. This digit is determined from the other 9 digit using the condition that d1 + 2d2 + 3d3 + ..... + 10d10 must be a multiple of 11 ( where di denotes the ith digit from the right). The checksum digit d1 can be any value from 0 to 10: the ISBN convention is to use the value X to denote 10. write a program that receives a 10-digit integer, computes the checksum, and reports whether the ISBN number is correct or not.
-// #include<stdio.h>
-// int main()
-// {
-//     char isbn[15];
-//     int i, sum = 0;
-//     printf("\nEnter 10 digit ISBN number : ");
-//     scanf("%s",isbn); //gets_s(str) is used to read a string from the user and store it in the 'str'.
-//     for( i = 0; i <= 9; i++)
-//     {
-//         isbn[i] -= 48; /* converting character into the numerals */
-//         sum = sum + (( i + 1) * isbn[i]); /* checking the condition of the ISBN validity */
-//     }
-//     if( sum % 11) /* If not divisible by 11 */
-//         puts("\nISBN number is wrong."); /* puts() is used to output the data of a string, it automatically append a newline at the end of the string. */
-//         else
-//             puts("\nISBN is valid.");
-//     return 0;
-// }
-
+// TODO : Attempt the following questions.
+//  * (B) TO uniquely identify a book of a 10 digit ISBN (International Standard Book Number) is used, the right most digit in ISBN is a checksum digit. This digit is determined from the other 9 digit using the condition that d1 + 2d2 + 3d3 + ..... + 10d10 must be a multiple of 11 ( where di denotes the ith digit from the right). The checksum digit d1 can be any value from 0 to 10: the ISBN convention is to use the value X to denote 10. write a program that receives a 10-digit integer, computes the checksum, and reports whether the ISBN number is correct or not.
+//  #include<stdio.h>
+//  int main()
+//  {
+//      char isbn[15];
+//      int i, sum = 0;
+//      printf("\nEnter 10 digit ISBN number : ");
+//      scanf("%s",isbn); //gets_s(str) is used to read a string from the user and store it in the 'str'.
+//      for( i = 0; i <= 9; i++)
+//      {
+//          isbn[i] -= 48; /* converting character into the numerals */
+//          sum = sum + (( i + 1) * isbn[i]); /* checking the condition of the ISBN validity */
+//      }
+//      if( sum % 11) /* If not divisible by 11 */
+//          puts("\nISBN number is wrong."); /* puts() is used to output the data of a string, it automatically append a newline at the end of the string. */
+//          else
+//              puts("\nISBN is valid.");
+//      return 0;
+//  }
 
 //! Question (C)
 // A Credit Card Number is usually a 16-digit number. A valid Credit Card number would satisfy the rule explained below with the help of a dummy credit card number - 4567 1234 5678 9129. starts with the rightmost - 1 digit and multiply every other digit by 2.
@@ -242,35 +241,64 @@ void main()
 } */
 
 // Write a program to copy one string to another string
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
+/*
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #define str_size 100
 int main()
 {
     char str1[str_size], str2[str_size];
     int i;
-    printf("Input the string: ");
+    printf("\n\nCopy one string into another string :\n");
+    printf("-----------------------------------------\n");
+    printf("Input the string : ");
     fgets(str1, sizeof str1, stdin);
-    while(str1[i] != '\0')
+
+    // Copies string1 to string2 character by character
+    i = 0;
+    while (str1[i] != '\0')
     {
         str2[i] = str1[i];
         i++;
     }
-    // make sure that the string is null terminated
+
+    // Makes sure that the string is NULL terminated
     str2[i] = '\0';
-    printf("\nThe first string is : %s\n", str1);
-    printf("Now, second string is : %s", str2);
+
+    printf("\nThe First string is : %s\n", str1);
+    printf("The Second string is : %s\n", str2);
+    printf("Number of characters copied : %d\n\n", i);
 }
+*/
 
+// Write a code to find total numbers of vowels and consonants in a string
+// #include<stdio.h>
+// #include<string.h>
+// #define str_size 100
+// int main()
+// {
+//     char str[str_size];
+//     int i, len;
+//     printf("Find total number of vowels and consonants in a string.\n");
+//     printf("Input the string: ");
+//     fgets(str, sizeof str, stdin);
+//     int vowel = 0, cons = 0;
+//     len = strlen(str);
+//     for(i = 0; i < len; i++)
+//     {
+//         if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
+//         {
+//         vowel++;
+//         }
+//         else if 
+//         ((str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z')){
+//             cons++;
+//         }
+//     }
+//     printf("\nTotal numbers of vowels in the string is: %d", vowel);
+//     printf("\nTotal number of consonants in the string is: %d", cons);
+//     return 0;
+// }
 
-
-
-
-
-
-
-
-
-
-
+// 
