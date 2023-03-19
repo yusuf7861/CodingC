@@ -291,7 +291,7 @@ int main()
 //         {
 //         vowel++;
 //         }
-//         else if 
+//         else if
 //         ((str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z')){
 //             cons++;
 //         }
@@ -301,4 +301,74 @@ int main()
 //     return 0;
 // }
 
-// 
+// Write a program to find the maximum numbers of characters in a string
+/*
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#define str_size 100 // Declare the maximum size of the string
+#define chr_no 255 // maximum number of characters to be stored
+int main()
+{
+    char str[str_size];
+    int ch_fre[chr_no];
+    int i = 0, max;
+    int ascii;
+    printf("\nFind maximum occuring character in a string.\n");
+    printf("Input the string: ");
+    fgets(str, sizeof str, stdin);
+
+    for(i = 0; i < chr_no; i++) // set frequency of all characters to 0
+    {
+        ch_fre[i] = 0;
+    }
+
+    // Read the frequency of each characters
+    i = 0;
+    while(str[i] != '\0')
+    {
+        ascii = (int)str[i];
+        ch_fre[ascii] += 1;
+
+        i++;
+    }
+    max = 0;
+    for( i = 0; i < chr_no; i++)
+    {
+        if(i != 32)
+        {
+            ch_fre[i] > ch_fre[max];
+            max = i;
+        }
+    }
+    printf("The highest frequency of character '%c' appears numbers of times : %d \n\n", max, ch_fre[max]);
+    return 0;
+}
+ */
+
+ // Write a program to sort array in ascending order
+// #include <stdio.h>
+// #include <string.h>
+// void main()
+// {
+//   char str[100],ch;
+//   int i,j,l;
+  
+//        printf("\n\nSort a string array in ascending order :\n");
+//        printf("--------------------------------------------\n");  
+//        printf("Input the string : ");
+//        fgets(str, sizeof str, stdin);
+//   l=strlen(str);
+//   /* sorting process */
+//   for(i=1;i<l;i++)
+//     for(j=0;j<l-i;j++)
+// 	if(str[j]>str[j+1])
+// 	{
+// 	  ch=str[j];
+// 	  str[j] = str[j+1];
+// 	  str[j+1]=ch;
+// 	}
+//    printf("After sorting the string appears like : \n");
+//    printf("%s\n\n",str);
+//   }
+
