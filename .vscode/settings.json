@@ -30,7 +30,8 @@
   ],
   "files.associations": {
     "stdio.h": "c",
-    "algorithm": "c"
+    "algorithm": "c",
+    "conio.h": "c"
   },
   "cSpell.words": [
     "areaperi",
