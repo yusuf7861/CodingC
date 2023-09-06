@@ -1,0 +1,2 @@
+This is a sample text file. It contains the word "banana" multiple times.
+Bananas are delicious. I like bananas.
